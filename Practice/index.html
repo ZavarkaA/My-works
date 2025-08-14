@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет самочувствия учеников</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/inputmask.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Форма учета самочувствия</h1>
+        <form action="process.php" method="post" id="healthForm">
+            <div class="form-group">
+                <label for="fullname">Фамилия и Имя ученика:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван" required 
+                       pattern="[А-ЯЁ][а-яё]+\s[А-ЯЁ][а-яё]+" 
+                       title="Введите в формате 'Фамилия Имя' (кириллицей)">
+            </div>
+
+            <div class="form-group">
+                <label for="class">Класс:</label>
+                <input type="text" id="class" name="class" placeholder="2 А" required 
+                       pattern="[1-9]+\s*[А-ЯЁ]" 
+                       title="Введите в формате '2 А' (цифра и буква класса)">
+            </div>
+
+            <div class="form-group">
+                <label>Симптомы:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="symptoms[]" value="Головная боль"> Головная боль</label>
+                    <label><input type="checkbox" name="symptoms[]" value="Тошнота"> Тошнота</label>
+                    <label><input type="checkbox" name="symptoms[]" value="Головокружение"> Головокружение</label>
+                    <label><input type="checkbox" name="symptoms[]" value="Слабость"> Слабость</label>
+                    <label><input type="checkbox" name="symptoms[]" value="Температура"> Температура</label>
+                    <label><input type="checkbox" name="symptoms[]" value="Боль в животе"> Боль в животе</label>
+                    <label><input type="checkbox" name="symptoms[]" value="Другое"> Другое</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Подробное описание проблемы:</label>
+                <textarea id="description" name="description" maxlength="1000" 
+                          placeholder="Опишите проблему подробнее (максимум 1000 символов)"></textarea>
+                <div class="char-counter"><span id="charCount">0</span>/1000 символов</div>
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+
+    <script>
+        // Маска для ввода ФИО
+        Inputmask({
+            regex: "[А-ЯЁ][а-яё]+\\s[А-ЯЁ][а-яё]+",
+            placeholder: "Иванов Иван",
+            showMaskOnHover: false
+        }).mask(document.getElementById('fullname'));
+
+        // Маска для класса
+        Inputmask({
+            regex: "[1-9]+\\s*[А-ЯЁ]",
+            placeholder: "2 А",
+            showMaskOnHover: false
+        }).mask(document.getElementById('class'));
+
+        // Счетчик символов
+        const description = document.getElementById('description');
+        const charCount = document.getElementById('charCount');
+        
+        description.addEventListener('input', function() {
+            charCount.textContent = this.value.length;
+        });
+    </script>
+</body>
+</html>
