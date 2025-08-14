@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GeneralCSS.CSS">
+    <title>Театр</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+          
+        }
+		.menu-right {
+			display: block;
+		}
+		.menu-button.mobile {
+			display: none;
+		}
+        @media (max-width: 72em) {
+            .main-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+            }
+            
+            .menu-left, .menu-right {
+                width: 100px;
+                order: 0;
+                flex-shrink: 0;
+            }
+            
+			.menu-right {
+				display: none;
+			}
+			
+			.menu-button.mobile {
+				display: block;
+			}
+			
+            .content-wrapper {
+                order: 1;
+                flex: 1;
+                margin-left: 0;
+                min-width: 0;
+            }
+            
+            .content-blocks {
+                height: 100%;
+            }
+            
+            .content-block2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Лого2.png" href="General.html">
+        <div class="page-title">Театр</div>
+    </header>
+    
+    <div class="main-container">
+        <div class="menu-left">
+            <button class="menu-button" onclick="self.location.href='General.html'">Главная</button>
+            <button class="menu-button" onclick="self.location.href='news.html'">Новости</button>
+            <button class="menu-button mobile" onclick="self.location.href='history.html'">История</button>
+            <button class="menu-button mobile" onclick="self.location.href='contacts.php'">Контакты</button>
+        </div>
+        
+       <div class="menu-right">
+            <button class="menu-button1" onclick="self.location.href='history.html'">История</button>
+            <button class="menu-button1" onclick="self.location.href='contacts.php'">Контакты</button>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="content-blocks">
+                <div class="content-block1"><p><b>Афиша</b></p><br>
+                    <br>
+                    <button class="prev" id="sliders_button"></button>
+                    <div><p class="name"> Текст 1</p> <br><br></div>
+                    <div class="slide-container">
+                        <div class="slides">
+                            <div class="slide"><img src="Девочки.jpg"></div>
+                            <div class="slide"><img src="Песни.jpg"></div>
+                            <div class="slide"><img src="тихоход.jpg"></div>
+                        </div>
+                            
+                            
+                            <div class="price">Цена за билет: 2500р.</div>
+                        </div>
+                </div>
+                <div class="content-block2"><p><b>Афиша</b></p>
+                <br>
+                    <div class="text-container"><p class="slide-text"></p></div>
+                    <button class="next" id="sliders_button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ssilki">
+            <a href="https://vk.com/dzav2000"> <img class="vk" src="Вк Надпись.png" > </a>
+            <a h ref="https://t.me/ZavarkaAa23"><img class="tg" src="Тг просто.png"></a>
+            <a ><img class="yt" src="YT.png" href=""></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const textPrimary = document.querySelector('.slide-text');
+            const textSecondary = document.querySelector('.name');
+            const textTertiary = document.querySelector('.price');
+            
+            // Тексты для каждого слайда
+            const slideTexts = [
+                {
+                    primary: "В рамках Военно-патриотического фестиваля «Завтра была война» имени Василия Ланового Центральный академический театр Российской армии представляет спектакль «Девочки». Постановка посвящена 100-летию со дня рождения Зои Космодемьянской и открыла 94-й театральный сезон. В основе спектакля — пьеса Дарьи Верясовой «9903» о девушках-разведчицах, добровольно вступивших в диверсионно-разведывательную группу в начале Великой Отечественной войны. Через их письма, монологи и архивные документы зрители узнают истории Зои Космодемьянской, Веры Волошиной, Клавдии Милорадовой и других героинь. «Они были молоды, но их выбор и любовь к Родине сделали их имена бессмертными», — говорит режиссер Юлия Шульева. Спектакль напоминает: каждый наш поступок определяет будущее, а мужество этих девушек вдохновляет и сегодня. Главная цель постановки — сохранить память. Ведь герои живы, пока о них помнят.",
+                    secondary: "Спектакль «Девочки»",
+                    tertiary: "Цена за билет: 2500."
+                },
+                {
+                    primary: "В рамках Военно-патриотического театрального фестиваля «Завтра была война» имени народного артиста СССР Василия Ланового свой спектакль представляет Театр мимики и жеста (Москва). Ко Дню Победы в 2023 г. он при поддержке Министерства культуры Российской Федерации подготовил театрализованную программу «Песни, рожденные войной». Основу программы составили песни военных лет, исполняемые артистами театра на русском жестовом языке. Исполнение на жестовом языке — это не буквальный перевод текста, а его образное переложение, основанное на ритмически выверенных жестах и требующее особой выразительности. Это в полной мере касается всех знакомых песен, вошедших в постановку. Артисты искренне надеются, что их мастерство позволит не просто услышать, но и заново раскрыть для зрителя смысл, заложенный в великих словах, вновь почувствовать всю глубину драматических событий тех лет, а также пережить героизм и патриотизм, проявленные народом в борьбе за свободу.",
+                    secondary: "Театрализованный концерт «Песни, рожденные войной»",
+                    tertiary: "Цена за билет: 2000."
+                },
+                {
+                    primary: "В рамках Военно-патриотического театрального фестиваля «Завтра была война» имени народного артиста СССР Василия Ланового свой спектакль представляет Таганрогский ордена «Знак Почета» театр им. А.П. Чехова. Протаранивший немецкий самолет, получивший тяжелое ранение, но чудом оставшийся живым, упав без парашюта в болото с высоты 6000 метров, майор Булочкин при искренней поддержке друзей благополучно проходит реабилитацию в госпитале. И возвращается в строй. Только… не в привычный свой истребительный полк, а в совершенно незнакомую ему бомбардировочную эскадрилью, оказавшуюся, в полный довесок «к счастью», еще и женской! И ему командовать такой эскадрильей? Есть от чего прийти в отчаяние стойкому холостяку! Однако жизнь расставляет все по своим местам… Но и на войне — жестокой, кровавой, беспощадной — есть место простым и высоким человеческим чувствам — утверждает спектакль. И останутся навсегда святыми дружба, честность, преданность, любовь!",
+                    secondary: "Спектакль «Небесный тихоход»",
+                    tertiary: "Цена за билет: 1800."
+                }
+            ];
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Функция для обновления слайда и текстов
+            function updateSlide() {
+                // Скрываем все слайды
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Показываем текущий слайд
+                slides[currentSlide].classList.add('active');
+                
+                // Обновляем оба текстовых блока
+                textPrimary.textContent = slideTexts[currentSlide].primary;
+                textSecondary.textContent = slideTexts[currentSlide].secondary;
+                textTertiary.textContent = slideTexts[currentSlide].tertiary;
+            }
+            
+            // Обработчики для кнопок
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlide();
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlide();
+            });
+            
+            // Инициализация
+            updateSlide();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

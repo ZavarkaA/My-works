@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Театр</title>
+    <link rel="stylesheet" href="GeneralCSS.CSS">
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+		.menu-right {
+			display: block;
+		}
+		.menu-button.mobile {
+			display: none;
+		}
+        @media (max-width: 72em) {
+            .main-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+            }
+            
+            .menu-left, .menu-right {
+                width: 100px;
+                order: 0;
+                flex-shrink: 0;
+            }
+            
+			.menu-right {
+				display: none;
+			}
+			
+			.menu-button.mobile {
+				display: block;
+			}
+			
+            .content-wrapper {
+                order: 1;
+                flex: 1;
+                margin-left: 0;
+                min-width: 0;
+            }
+            
+            .content-blocks {
+                height: 100%;
+            }
+            
+            .content-block2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Лого2.png" alt="Логотип театра">
+        <div class="page-title">Театр</div>
+    </header>
+    
+    <div class="main-container">
+        <div class="menu-left">
+            <button class="menu-button" onclick="self.location.href='General.html'">Главная</button>
+            <button class="menu-button" onclick="self.location.href='news.html'">Новости</button>
+            <button class="menu-button mobile" onclick="self.location.href='history.html'">История</button>
+            <button class="menu-button mobile" onclick="self.location.href='contacts.php'">Контакты</button>
+        </div>
+        
+       <div class="menu-right">
+        <button class="menu-button1" onclick="self.location.href='history.html'">История</button>
+        <button class="menu-button1" onclick="self.location.href='contacts.php'">Контакты</button>        </div>
+        
+        <div class="content-wrapper">
+            <div class="content-blocks">
+                <div class="content-block1">
+                    <p><b>Новости</b></p>
+                    <p class="Zag">
+                    <b style="font-size: 120%;">Открытие театрального фестиваля «Чеховские дни»</b><br>
+                    Новости мероприятий
+                    С 1 по 10 мая в театре имени Чехова пройдет традиционный фестиваль «Чеховские дни», который станет настоящим праздником театрального искусства.
+                    
+                    Программа фестиваля включает:
+                    
+                    Показы лучших спектаклей театра
+                    Мастер-классы от ведущих актеров
+                    Встречи со зрителями
+                    Театральные чтения
+                    Выставку архивных материалов
+                    Специальным гостем фестиваля станет известный театральный режиссер Игорь Васильев, который представит свою новую работу и проведет открытую репетицию с актерами театра.
+                    
+                    Для юных зрителей подготовлена отдельная программа, включающая интерактивные спектакли и театральные квесты.</p>
+                </div>
+                <div class="content-block2"> 
+                    <p><b>Новости</b></p>
+
+                    <p class="Zag">
+                    <b style="font-size: 120%;">Театр внедряет новые форматы взаимодействия со зрителями</b><br>
+                        С 1 апреля театр имени Чехова запускает масштабный проект по цифровизации театрального пространства.
+                        
+                        Мобильное приложение театра теперь позволяет:
+                        
+                        Покупать билеты онлайн
+                        Получать персональные рекомендации
+                        Участвовать в опросах
+                        Записывать отзывы о спектаклях
+                        Получать уведомления о новых премьерах
+                        Программа лояльности «Клуб друзей театра» предлагает:
+                        
+                        Специальные скидки на билеты
+                        Приоритетный доступ к премьерам
+                        Приглашения на закрытые показы
+                        Встречи с актерами и режиссерами
+                        Иммерсивный проект «За кулисами» позволит зрителям погрузиться в атмосферу театрального закулисья и стать участниками уникального театрального действа.</p>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="ssilki">
+            <a href="https://vk.com/dzav2000"><img class="vk" src="Вк Надпись.png" alt="ВКонтакте"></a> 
+            <a href="https://t.me/ZavarkaAa23"><img class="tg" src="Тг просто.png" alt="Telegram"></a>
+            <a href="#"><img class="yt" src="YT.png" alt="YouTube"></a>
+        </div>
+    </footer>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function navigate(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

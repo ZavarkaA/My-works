@@ -1,0 +1,336 @@
+/* Общие стили */p {
+    font-size: 300%;
+    font-family: 'Marck Script';
+    align-self: center;
+}
+b {
+
+    font-family: 'Marck Script';
+    align-self: center;
+}
+body {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #631114;
+}
+
+header {
+    background-color: #83181B;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #631114;
+}
+.logo {
+    width: 10vh;
+}
+.tg {
+    width:8.2vh; 
+}
+.vk {
+    width:10vh; 
+}
+.yt {
+    width:10vh; 
+}
+
+.Zag {
+    font-size:169%;
+    text-align: center;
+}
+.Zag2{
+    font-size:170%;
+    text-align: center;
+}
+.Zag3{
+    font-size:160%;
+    text-align: center;
+}
+.Zag4{
+    font-size:150%;
+    text-align: center;
+}
+
+/* Слайдер фото */
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    left: 10%;
+    display: block;
+    
+}
+
+.text-container {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    min-height: 100px;
+}
+/* Описание к спектаклям */
+.slide-text {
+    font-size: 2.5vh;
+ 
+}
+.map {
+align-self: center;
+size: 200%;
+}
+.price{
+    font-size: 170%;
+    font-family: 'Marck Script';
+}
+
+.name {
+    text-align: center; 
+    font-size: 180%;
+}
+/* Бутоны */
+
+.prev {
+position: absolute;
+bottom: 0%;
+left: 0%;
+background:#d8d3c2;
+border-style: solid;
+border-width: 2vh;
+border-top-color:#ffffff;
+border-right-color: #ffffff;
+border-bottom-color: transparent;
+border-left-color: transparent;
+transition: 1s;
+
+&:hover{
+    border-width: 4vh;
+    transition: 1s;
+}
+}
+
+.next{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    background:#d8d3c2;
+    border-style: solid;
+    border-width: 2vh;
+    border-top-color:#ffffff;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #ffffff;
+    transition: 1s;
+    
+    &:hover{
+        border-width: 4vh;
+        transition: 1s;
+    }
+    }
+.page-title {
+    font-size: 450%;
+    color: #FFD700;
+    font-family: 'Marck Script';
+    margin: auto;
+}
+
+
+
+/* Основная структура - ДЕСКТОПНАЯ ВЕРСИЯ */
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+/* Меню */
+.menu-left {
+    width: 100px;
+    right: 0%;
+    padding-top: 12px ;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+}
+
+.menu-right {
+    width: 100px;
+    padding-top: 12px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order:1;
+}
+
+.menu-button {
+    width: 80px;
+    height: 70px;
+    background-color: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 80%;
+    border: none;
+    margin: 5px 0;
+    border-style: none ;
+    clip-path: polygon(0 0, 100% 0, 100% 100%,  0 100%, 15% 50%);
+    transition: 0.5s;
+    &:hover{
+        width: 100px;
+        transition: 0.7s;
+    }
+}
+.menu-button1 {
+    width: 80px;
+    height: 70px;
+    background-color: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 80%;
+    border: none;
+    margin: 5px 0;
+    border-style: none ;
+    clip-path: polygon(0 0, 100% 0,85% 50% ,100% 100%,  0 100%);
+    transition: 0.5s;
+    &:hover{
+        width: 100px;
+        transition: 0.7s;
+    }
+}
+.menu-button:hover {
+    filter: brightness(95%);
+}
+
+/* Контент - ДЕСКТОП */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    background-color: #631114;
+}
+
+.content-blocks {
+    display: flex;
+    flex: 1;
+}
+
+.content-block1 {
+    flex: 1;
+    background-color: #F0EAD6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-right: 1px solid #e0e0e0;
+    border-radius: 0 4% 4% 0;
+    margin: 1em 0;
+}
+
+.content-block2 {
+    flex: 1;
+    background-color: #D8D3C3;
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    border-radius: 4% 0 0 4%;
+    margin: 1em 0;
+}
+
+footer {
+    background-color: #83181B;
+    color: white;
+    padding: 15px;
+    text-align: end;
+    font-size: 14px;
+    padding-right: 2%;
+}
+.price{
+display:flex;
+margin-left: 70%;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 72em) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+   
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #631114;
+    }
+    
+    
+    .menu-left, .menu-right {
+        width: 100%;
+        flex-direction: column;
+        order: 0;
+        padding: 0;
+    }
+    
+    
+    .menu-buttons-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+   
+    .content-wrapper {
+        width: 100%;
+        order: 1;
+    }
+    
+    .content-block1 {
+        border-radius: 0;
+        margin: 0;
+        min-height: calc(100vh - 200px);
+    }
+    
+    .content-block2 {
+        display: none;
+    }
+}

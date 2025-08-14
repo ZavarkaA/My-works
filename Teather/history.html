@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Театр</title>
+    <link rel="stylesheet" href="GeneralCSS.CSS">
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+		.menu-right {
+			display: block;
+		}
+		.menu-button.mobile {
+			display: none;
+		}
+        @media (max-width: 72em) {
+            .main-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+            }
+            
+            .menu-left, .menu-right {
+                width: 100px;
+                order: 0;
+                flex-shrink: 0;
+            }
+            
+			.menu-right {
+				display: none;
+			}
+			
+			.menu-button.mobile {
+				display: block;
+			}
+			
+            .content-wrapper {
+                order: 1;
+                flex: 1;
+                margin-left: 0;
+                min-width: 0;
+            }
+            
+            .content-blocks {
+                height: 100%;
+            }
+            
+            .content-block2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Лого2.png" alt="Логотип театра">
+        <div class="page-title">Театр</div>
+    </header>
+    
+    <div class="main-container">
+        <div class="menu-left">
+            <button class="menu-button" onclick="self.location.href='General.html'">Главная</button>
+            <button class="menu-button" onclick="self.location.href='news.html'">Новости</button>
+            <button class="menu-button mobile" onclick="self.location.href='history.html'">История</button>
+            <button class="menu-button mobile" onclick="self.location.href='contacts.php'">Контакты</button>
+        </div>
+        
+       <div class="menu-right">
+        <button class="menu-button1" onclick="self.location.href='history.html'">История</button>
+        <button class="menu-button1" onclick="self.location.href='contacts.php'">Контакты</button>       </div>
+        
+        <div class="content-wrapper">
+            <div class="content-blocks">
+                <div class="content-block1">
+                    <p><b>История</b></p>
+                   <p class="Zag3"> <b>Первые шаги (1808-1827)</b><br>
+История театра началась в 1808 году, когда городские власти запросили разрешение на строительство театрального здания. В 1827 году группа артистов под руководством дворянина Петровского организовала первый творческий коллектив, разместившийся в амбарной пристройке дома купца Караяни.
+
+<br><b>Строительство нового здания (1863-1866)</b><br>
+В 1863 году определили место для нового здания театра. 2 апреля 1866 года состоялась закладка первого камня в строительство здания в стиле неоклассицизма по проекту архитекторов К. Лондерона и Н. Трусова. Внутреннее убранство в стиле «Ла Скала» создал купец С.И. Мавро.
+
+<br><b>Период расцвета (1866-1896)</b><br>
+С 1866 по 1886 год в театре работали две труппы: итальянская оперная и русская драматическая. В репертуаре были оперы Россини, Верди, Глинки, Чайковского. На гастроли приезжали известные артисты: Айра Олдридж, Эрнесто Росси, Томазо Сальвини.</p>
+                </div>
+                <div class="content-block2">
+                    <p><b>История</b></p>
+                    <p class="Zag4">
+                    <b>Начало XX века</b><br>
+В 1896 году с большим успехом прошла постановка «Чайки» А.П. Чехова. В 1901 году в здании состоялся первый киносеанс в Таганроге. В предреволюционные годы труппа работала под руководством Н.К. Шатлен.
+
+<br><b>Советский период</b><br>
+В 1920 году театр был национализирован и стал народно-художественным. На сцене ставились как классические произведения, так и новые пьесы Безыменского, Лунарчарского, Горького. На сцене выступали известные артисты из центральных театров, включая актеров МХАТа.
+<br><b>Современность</b><br>
+В 1977 году театр был приглашен в Москву со спектаклем «Дядя Ваня». За последующие годы многие актеры получили звания заслуженных артистов. Молодая актриса Елена Федоровская стала признанной чеховской актрисой театра.
+
+Сегодня театр продолжает традиции русского психологического театра, представляя широкий репертуар, включающий как классические, так и современные постановки.       
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="ssilki">
+            <a href="https://vk.com/dzav2000"><img class="vk" src="Вк Надпись.png" alt="ВКонтакте"></a> 
+            <a href="https://t.me/ZavarkaAa23"><img class="tg" src="Тг просто.png" alt="Telegram"></a>
+            <a href="#"><img class="yt" src="YT.png" alt="YouTube"></a>
+        </div>
+    </footer>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function navigate(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
