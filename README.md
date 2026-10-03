@@ -56,7 +56,6 @@ Here you can find my practical projects, experiments and learning progress.
 
 # 🔧 Service Maintenance System
 
-🇬🇧 English | 🇷🇺 Русский
 
 A web-based service maintenance request management system developed as an educational project.
 
@@ -123,7 +122,6 @@ The backend handles business logic, data processing and communication with the d
 
 # 🎭 Theater Website
 
- English |  Русский
 
 A theater website developed as a practical web development project.
 
@@ -151,7 +149,6 @@ It was developed to practice web development using PHP, JavaScript, HTML and CSS
 ---
 # 📝 Educational Survey Form
 
-🇬🇧 English | 🇷🇺 Русский
 
 A survey form developed for educational institutions.
 
@@ -190,7 +187,7 @@ The project was created to practice working with PHP, JavaScript and frontend te
 
 ## 📊 GitHub Stats
 
-<!--![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ZavarkaA\&show_icons=true\&theme=tokyonight\&hide_border=true\&include_all_commits=true)
+<!--[GitHub Stats](https://github-readme-stats.vercel.app/api?username=ZavarkaA\&show_icons=true\&theme=tokyonight\&hide_border=true\&include_all_commits=true)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ZavarkaA\&layout=compact\&theme=tokyonight\&hide_border=true) -->
 
