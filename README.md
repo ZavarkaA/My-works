@@ -54,14 +54,133 @@ Here you can find my practical projects, experiments and learning progress.
 
 Здесь собраны мои практические проекты, эксперименты и результаты обучения.
 
-<!-- Add your projects here -->
+# 🔧 Service Maintenance System
+
+🇬🇧 English | 🇷🇺 Русский
+
+A web-based service maintenance request management system developed as an educational project.
+
+The application is designed to organize maintenance requests, manage their statuses and coordinate work between employees.
+
+## 📌 About the Project | О проекте
+
+**English**
+
+The system is designed to simplify the process of handling service maintenance requests.
+
+It provides a centralized environment for working with requests, managing employees and tracking the progress of maintenance tasks.
+
+**Русский**
+
+Система предназначена для автоматизации процесса обработки заявок на сервисное обслуживание.
+
+Приложение позволяет организовать работу с заявками, управлять сотрудниками и отслеживать ход выполнения сервисных задач.
+
+## ⚙️ Main Features | Основные возможности
+
+
+* Employee authentication and authorization
+* Service request management
+* Request categorization
+* Request status management
+* Assignment of responsible employees
+* Request history
+* Attached images
+* Communication between users
+
+## 🛠️ Tech Stack | Технологии
+
+### Backend
+
+* Python
+* Django
+* REST API
+
+### Database
+
+* PostgreSQL
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+
+### DevOps & Tools
+
+* Docker
+* Git
+
+## 🏗️ Architecture | Архитектура
+
+The application follows a backend-oriented web application architecture.
+
+The backend handles business logic, data processing and communication with the database through API endpoints.
+
+
+---
+
+# 🎭 Theater Website
+
+ English |  Русский
+
+A theater website developed as a practical web development project.
+
+## 📌 About the Project | О проекте
+
+**English**
+
+This project is a website dedicated to a theater.
+
+It was developed to practice web development using PHP, JavaScript, HTML and CSS.
+
+**Русский**
+
+Проект представляет собой веб-сайт театра.
+
+Разработка выполнялась в рамках практической работы с использованием PHP, JavaScript, HTML и CSS.
+
+## 🛠️ Technologies
+
+* PHP
+* JavaScript
+* HTML5
+* CSS3
+
+---
+# 📝 Educational Survey Form
+
+🇬🇧 English | 🇷🇺 Русский
+
+A survey form developed for educational institutions.
+
+## 📌 About the Project | О проекте
+
+**English**
+
+A small web application designed as a survey form for educational institutions.
+
+The project was created to practice working with PHP, JavaScript and frontend technologies.
+
+**Русский**
+
+Небольшое веб-приложение в формате опросной формы для учебных заведений.
+
+Проект создан для практики работы с PHP, JavaScript и frontend-технологиями.
+
+## 🛠️ Technologies
+
+* PHP
+* JavaScript
+* HTML5
+* CSS3
 
 ---
 
 ## 📚 Currently Learning | Сейчас изучаю
 
 * Backend application architecture
-* REST API development
 * Database design and optimization
 * Clean Code and SOLID principles
 * Automated testing
@@ -71,15 +190,16 @@ Here you can find my practical projects, experiments and learning progress.
 
 ## 📊 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ZavarkaA\&show_icons=true\&theme=tokyonight\&hide_border=true\&include_all_commits=true)
+<!--![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ZavarkaA\&show_icons=true\&theme=tokyonight\&hide_border=true\&include_all_commits=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ZavarkaA\&layout=compact\&theme=tokyonight\&hide_border=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ZavarkaA\&layout=compact\&theme=tokyonight\&hide_border=true) -->
 
 ---
 
 ## 📫 Contact Me | Связаться со мной
 
 * GitHub: [@ZavarkaA](https://github.com/ZavarkaA)
+* Telegramm [@ZavarkaAa23](https://t.me/ZavarkaAa23)
 
 ---
 
