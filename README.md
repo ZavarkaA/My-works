@@ -8,13 +8,13 @@
 
 ## 🌍 About Me | Обо мне
 
-🇬🇧 **English**
+ **English**
 
 Hi! I'm Zavarka, a Junior Backend Developer interested in Python and web development.
 
 I enjoy building backend applications, developing REST APIs and working with databases. I'm constantly learning new technologies and improving my programming skills through practical projects.
 
-🇷🇺 **Русский**
+ **Русский**
 
 Привет! Я Заварка, начинающий Backend-разработчик, интересующийся Python и веб-разработкой.
 
